@@ -14,12 +14,12 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void createUsersTable() {
         try {
-            String q = "create table USERS " +
-                    "(id INTEGER not NULL PRIMARY KEY," +
-                    " name VARCHAR(255) not NULL," +
-                    " lastName VARCHAR(255) not NULL," +
-                    " age SMALLINT not NULL" +
-                    ")";
+            String q = "create table USERS" +
+                    " (id integer primary key autoincrement," +
+                    " name varchar(255) not null," +
+                    " last_name varchar(255) not null," +
+                    " age integer not NULL" +
+                    ");";
 
             Connection conn = Util.getConnection();
 
